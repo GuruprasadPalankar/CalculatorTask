@@ -1,0 +1,59 @@
+﻿body {
+    font-family: Arial;
+    font-size: large;
+}
+
+h1 {
+    color: darkblue;
+}
+
+h3 {
+    color: blue;
+    padding-bottom: 10px;
+}
+
+.validation-message {
+    font-family: Calibri;
+    display: block;
+    color: red;
+    padding-bottom: 15px;
+}
+
+.submit-button-heading {
+    padding-top: 15px;
+    color: deeppink;
+    display: block;
+}
+
+.button {
+    border-color: black;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size:medium;
+}
+
+.add-button {
+    background-color: deeppink;
+}
+
+.subtract-button {
+    background-color: forestgreen;
+}
+
+.multiply-button {
+    background-color: orangered;
+}
+
+.divide-button {
+    background-color: purple;
+}
+
+.power-button {
+    background-color: salmon;
+}
+
+.result {
+    color: purple;
+    padding-top: 50px;
+}

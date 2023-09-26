@@ -1,0 +1,42 @@
+﻿@model CalculatorTask.Models.NumbersModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculator</title>
+    <link href="~/Content/Calculator.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    <h1>This is Calculator Project!!!</h1>
+    <h3>Please enter 1st and 2nd Number</h3>
+    <div>
+        <section>
+            @using (Html.BeginForm("Display", "Home", FormMethod.Post))
+            {
+                <label>1st Number: </label>@Html.EditorFor(x => x.Number1)
+                <label class="validation-message">@Html.ValidationMessageFor(x => x.Number1)</label>
+                
+                <label>2nd Number: </label>@Html.EditorFor(x => x.Number2)
+                <label class="validation-message">@Html.ValidationMessageFor(x => x.Number2)</label>
+                
+                <label class="submit-button-heading">Please choose one operation you want to perform</label>
+
+                <input type="submit" value="Add" name="operation" class="btn btn-default button add-button" />
+                <input type="submit" value="Subtract" name="operation" class="btn btn-default button subtract-button" />
+                <input type="submit" value="Multiply" name="operation" class="btn btn-default button multiply-button" />
+                <input type="submit" value="Divide" name="operation" class="btn btn-default button divide-button" />
+                <input type="submit" value="Power" name="operation" class="btn btn-default button power-button" />
+                //If you extend this project in future then please create a new submit button here to perform new operation that you have added recently.
+            }
+        </section>
+    </div>
+    
+    <div>
+        <label class="result">Result: </label> @Html.TextBoxFor(x => x.Solution)
+    </div>
+</body>
+</html>
